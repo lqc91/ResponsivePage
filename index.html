@@ -10,17 +10,21 @@
 <body>
   <!-- 第一区域 -->
   <header class="header">
-    <nav class="nav">
-      <a class="nav__link nav__link_active">前端</a>
-      <a class="nav__link">java</a>
-      <a class="nav__link">ios</a>
-      <a class="nav__link">Android</a>
-      <a class="nav__link">php</a>
+    <div class="bar">
+      <h3 class="bar__title">imooc</h3>
+      <button id="barBtn" class="bar__btn"></button>
+    </div>
+    <nav id="nav" class="nav">
+      <a class="nav__link nav__link_active" href="https://m.imooc.com/course/list?c=fe">前端</a>
+      <a class="nav__link" href="https://m.imooc.com/course/list.html?c=java">java</a>
+      <a class="nav__link" href="https://m.imooc.com/course/list.html?c=ios">ios</a>
+      <a class="nav__link" href="https://m.imooc.com/course/list.html?c=android">Android</a>
+      <a class="nav__link" href="https://m.imooc.com/course/list.html?c=php">php</a>
     </nav>
     <div class="box">
       <img class="box__img" src="./img/1.png">
       <p class="box__txt">IMOOC</p>
-      <button class="box__btn" type="button">start</button>
+      <a class="box__btn" href="https://m.imooc.com/">start</a>
     </div>
   </header>
   <!-- 第二区域 -->
@@ -38,7 +42,7 @@
   <!-- 第四区域 -->
   <section class="website">
     <span class="website__name">IMOOC</span>
-    <span class="website__site">welcome to <a class="website__link" href="https://www.imooc.com/">www.imooc.com</a></span>
+    <span class="website__site">welcome to <a class="website__link" href="https://m.imooc.com/">www.imooc.com</a></span>
   </section>
   <!-- 第五区域 -->
   <section class="course">

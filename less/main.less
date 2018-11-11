@@ -10,10 +10,12 @@
   align-items:center;
   width:100%;
   background-color:#b2c5cc;
+  .bar{
+    display:none;
+  }
   .nav{
     .center;
     width:50%;
-    height:1.1rem;
     text-align:center;
     line-height:1.1rem;
     font-size:.16rem;
@@ -46,10 +48,12 @@
     &__btn{
       width:100%;
       height:.48rem;
+      line-height:.48rem;
+      text-align:center;
       border:0;
-      color:#000;
+      color:#666;
       font-size:.12rem;
-      background-color:#ccc;
+      background-color:#ddd;
       &:hover{
         background-color:rgb(255, 255, 255);
         transition:background-color 1s;
@@ -61,7 +65,6 @@
 .about{
   .center;
   width:100%;
-  height:.8rem;
   text-align:center;
   line-height:.8rem;
   font-size:.14rem;
@@ -83,16 +86,18 @@
 .responsive{
   .center;
   flex-direction:column;
-  width:50%;
-  height:2.8rem;
+  width:48%;
   margin:1rem auto;
   &__title{
     font-size:.24rem;
     line-height:.7rem;
+    color:#545454;
   }
   &__txt{
     font-size:.12rem;
-    line-height:.26rem;
+    letter-spacing:.01rem;
+    line-height:2.1;
+    color:#bababa;
   }
 }
 /* 第四区域 */
@@ -101,17 +106,16 @@
   justify-content:space-between;
   align-items:center;
   width:100%;
-  height:.75rem;
   line-height:.75rem;
-  padding:0 .6rem;
-  color:#6e6e6e;
+  padding:0 .65rem;
+  color:#bababa;
   box-sizing:border-box;
   background-color:#f4f4f4;
   &__name{
-    font-size:.16rem;
+    font-size:.18rem;
   }
   &__site{
-    font-size:.12rem;
+    font-size:.16rem;
   }
   &__link{
     display:inline-block;
@@ -128,8 +132,8 @@
   &__title{
     width:8.8rem;
     color:#888;
-    font-size:.2rem;
-    line-height:.32rem;
+    font-size:.22rem;
+    line-height:1.5;
   }
   &__item{
     display:flex;
@@ -159,8 +163,74 @@
 .footer{
   .center;
   width:100%;
-  height:.65rem;
-  font-size:.16rem;
+  line-height:4;
+  font-size:.22rem;
   color:#000;
   background-color:#f1f1f1;
+}
+/* 适配iPhone6 */
+@media screen and (max-width:420px){
+  .header{
+    position:relative;
+    .bar{
+      .center;
+      flex-direction:row;
+      position:absolute;
+      z-index:9;
+      width:100%;
+      height:1rem;
+      text-align:center;
+      background-color:#7ea6b1;
+      &__title{
+        flex-grow:1;
+        font-size:.46rem;
+        color:#fff;
+        margin-left:.8rem;
+      }
+      &__btn{
+        display:line-block;
+        width:.35rem;
+        height:.35rem;
+        margin-right:.45rem;
+        border:1px solid #b2c5cc;
+        background-color:#7ea6b1;
+      }
+    }
+    .nav{
+      display:flex;
+      flex-direction:column;
+      position:absolute;
+      top:-1.6rem;
+      z-index:1;
+      width:100%;
+      background-color:#7ea6b1;
+      &__link{
+        width:100%;
+        height:.48rem;
+        line-height:.48rem;
+        color:#fff;
+        border-bottom:1px solid #b2c5cc;
+      }
+    }
+    .box{
+      margin-top:1rem;
+    }
+  }
+  .website{
+    flex-direction:column;
+    line-height:.5rem;
+    padding:.2rem 0;
+  }
+  .course{
+    &__item{
+      height:7.9rem;
+    }
+    &__img{
+      width:4.3rem;
+      &:hover{
+        width:4.45rem;
+        height:2.5rem;
+      }
+    }
+  }
 }
